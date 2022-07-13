@@ -13,7 +13,7 @@ config :hexpm,
 
 config :hexpm, HexpmWeb.Endpoint,
   http: [port: 4000],
-  debug_errors: true,
+  debug_errors: false,
   code_reloader: true,
   cache_static_lookup: false,
   check_origin: false,

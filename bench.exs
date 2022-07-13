@@ -5,6 +5,8 @@
 #     $ mix setup
 #     $ mix run bench.exs
 
+:erts_internal.debug_on()
+
 conn = Plug.Test.conn(:get, "/")
 conn = HexpmWeb.Endpoint.call(conn, HexpmWeb.Endpoint.init([]))
 200 = conn.status
@@ -12,3 +14,5 @@ conn = HexpmWeb.Endpoint.call(conn, HexpmWeb.Endpoint.init([]))
 conn = Plug.Test.conn(:get, "/packages/ecto")
 conn = HexpmWeb.Endpoint.call(conn, HexpmWeb.Endpoint.init([]))
 200 = conn.status
+
+:erts_internal.debug_off()

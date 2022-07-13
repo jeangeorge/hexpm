@@ -25,7 +25,7 @@ defmodule Hexpm.MixProject do
   end
 
   defp extra_applications(:test), do: [:logger]
-  defp extra_applications(_), do: [:logger, :runtime_tools, :os_mon]
+  defp extra_applications(_), do: [:logger, :runtime_tools]
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_), do: ["lib"]
